@@ -11,10 +11,15 @@ export class UserComponent {
   data: any = '';
 
   constructor(private http: HttpClient) {
-    http.get("http://localhost:8080/getMessage").subscribe((res :any) => {
-      this.data = res;
-      console.log("res", res)
-    })
+    // http.get("http://localhost:8080/getMessage").subscribe((res :any) => {
+    //   this.data = res;
+    //   console.log("res", res)
+    // })
+    this.data = {
+      "name": "Mani",
+      "email": "manikumarhl98@gmail.com",
+      "age": 25
+    }
   }
 
 }
