@@ -30,3 +30,12 @@
     height: 156%;
     object-fit: cover; /* Maintain aspect ratio and cover the container */
   }
+
+  .nav-bar {
+    display: flex; 
+    color: whitesmoke;
+    justify-content: space-evenly;
+    padding-top: 4% !important;
+    margin-left: -5%;
+    text-transform: uppercase;
+  }

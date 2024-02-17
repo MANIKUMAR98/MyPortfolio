@@ -1,9 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 html {
     padding: 0;
     margin: 0;
 }
 body {
     margin: 0;
-    padding: 0; /* Optional: Setting padding to zero as well */
+    padding: 0;
   }

@@ -26,9 +26,12 @@ export class UserComponent {
       scaleMobile: 1.00,
       points: 17.00,
       maxDistance: 26.00,
-      spacing: 19.00,
-      showDots : false
-      
+      spacing: 21.00,
+      showDots : false,
+      color: 0x987185,
+      backgroundColor: 0xa2539 
+      // color: 0x987272,
+      // backgroundColor: 0x30314
     });
   }
 
