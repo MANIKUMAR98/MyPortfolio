@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ViewChild, NgZone,  ElementRef } from '@angular/core';
+import { Component, ViewChild, NgZone,  ElementRef, HostListener } from '@angular/core';
 import Typed from 'typed.js';
 declare var VANTA : any;
 @Component({
@@ -40,7 +40,7 @@ export class UserComponent {
       strings: ['Manikumar Honnenahalli Lakshminarayana Swamy  '],
       typeSpeed: 80, 
       backSpeed: 30, 
-      showCursor: true, 
+      showCursor: false, 
     };
 
     new Typed(this.typingElement.nativeElement, options);
@@ -56,5 +56,8 @@ export class UserComponent {
   ngOnInit(): void {
   
   }
-
+  
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
+  }
 }

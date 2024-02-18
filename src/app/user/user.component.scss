@@ -3,17 +3,17 @@
 }
 
 .name {
-    color: white;
+    color: #ddd2d2;
     padding-top: 15%;
     font-family: sans-serif;
     font-weight: 600;
 }
 
 .about {
-    color: white;
+    color: #ddd2d2;
     font-size: 18px;
     width: 77%;
-    font-family: math;
+    font-family: inherit;
     text-align: justify;
 }
 
@@ -33,7 +33,7 @@
 
   .nav-bar {
     display: flex; 
-    color: whitesmoke;
+    color: #ddd2d2;
     justify-content: space-evenly;
     padding-top: 4% !important;
     width: 100%;
@@ -43,7 +43,7 @@
 
   .nav-text:hover {
     border-bottom: 2px solid red;
-    color: grey;
+    color: whitesmoke;
   }
 
 

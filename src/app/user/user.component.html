@@ -1,9 +1,9 @@
 
 
-  <div id=vanta style="margin-top: -1.5%;">
+  <div #about id=vanta style="margin-top: -1.5%;">
     <div class="nav-bar text-lg tracking-wider absolute z-10">
-      <div class="cursor-pointer nav-text">About</div>
-      <div class="cursor-pointer nav-text">My Skills</div>
+      <div class="cursor-pointer nav-text" (click)="scroll(about)">About</div>
+      <div class="cursor-pointer nav-text" (click)="scroll(target)">My Skills</div>
       <div class="cursor-pointer nav-text">Work Experience</div>
       <div class="cursor-pointer nav-text">Projects</div>
       <div class="cursor-pointer nav-text">Contact Me</div>
@@ -11,13 +11,13 @@
     <div style="margin-left: 6%; display: flex; margin-right: 9%; padding-top: 6%;">
         <div>
           <div class="typing-container">
-            <h1 class="name text-5xl">
+            <h1 class="name !text-3xl">
               <span #typingElement></span>
             </h1>
           </div>
           <div class="about tracking-wider mt-5">
             <p>Hi!,</p>
-            <p  style="line-height: 30px;">
+            <p  style="line-height: 30px; font-weight: 600 !important; font-family: silka;">
               I'm graduate student currently pursuing a Master of Science in Computer Science at the University of Florida. I bring with me a robust foundation as a software developer, well-versed in programming languages such as Java, Python, and JavaScript. Additionally, I have hands-on experience with containerization technologies like Docker and orchestration tools like Kubernetes, Openshift. My journey in technology is a continuous quest for new challenges, driven by curiosity, and a commitment to expanding my skill set.
             </p>
           </div>
@@ -30,7 +30,12 @@
       </div>
 
   </div>
-<div class="mt-28 ml-12 mr-12 flex justify-start flex-wrap justify-start">
+
+  <!-- SKills -->
+<div #target class="mt-28 ml-12 text-3xl uppercase font-bold bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 text-transparent bg-clip-text bg-300% animate-gradient">
+    Technical Skills
+</div>
+<div class="mt-4 ml-12 mr-12 flex justify-start flex-wrap justify-start">
   <div [class.mat-elevation-z8] = "true" class="mb-8 mr-6">
     <mat-card appMaterialElevation>
       <mat-card-header class="mb-2">
@@ -39,15 +44,15 @@
       <mat-divider></mat-divider>
       <mat-card-content >
         <div class="flex justify-start mt-6 space-x-6">
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="JAVA" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />   
+          <img class="icon-height" matTooltip="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />   
   
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+          <img class="icon-height" matTooltip="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
             
           <!-- <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" /> -->
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+          <img class="icon-height" matTooltip="C++" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
             
         </div>
       </mat-card-content>
@@ -62,13 +67,13 @@
       <mat-card-content>
         <div class="flex justify-start mt-6 space-x-6">
   
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="Spring Boot" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
          
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" />
+          <img class="icon-height" matTooltip="Angular" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" />
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" />
+          <img class="icon-height" matTooltip="Django" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" />
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="Node.js" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
             
         </div>
       </mat-card-content>
@@ -82,13 +87,13 @@
       <mat-divider></mat-divider>
       <mat-card-content>
         <div class="flex justify-start mt-6 space-x-6">
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="Kubernetes" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original-wordmark.svg" />
             
-          <img class="icon-height" src="assets/images/openshift-svgrepo-com.svg" />
+          <img class="icon-height" matTooltip="Openshift" src="assets/images/openshift-svgrepo-com.svg" />
   
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
+          <img class="icon-height" matTooltip="Azure" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
             
         </div>
       </mat-card-content>
@@ -104,13 +109,13 @@
       <mat-card-content>
         <div class="flex justify-start mt-6 space-x-6">
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="MS SQL Server" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg" />
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="My SQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="SQLite" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg" />
             
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="MangoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
             
         </div>
       </mat-card-content>
@@ -127,13 +132,13 @@
         <div class="flex justify-start mt-6 space-x-6 flex-wrap">
           
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg" />
+          <img class="icon-height" matTooltip="GIT" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg" />
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+          <img class="icon-height" matTooltip="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="VS Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" />
            
         </div>
       </mat-card-content>
@@ -150,21 +155,74 @@
         <div class="flex justify-start mt-6 space-x-6 flex-wrap">
           
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="Apache Kafka" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original-wordmark.svg" />
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="RabbitMQ" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original-wordmark.svg" />
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/splunk/splunk-original-wordmark.svg" />
+          <img class="icon-height" matTooltip="Splunk" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/splunk/splunk-original-wordmark.svg" />
           
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
+          <!-- <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
           
           <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
-          
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
+           -->
+          <img class="icon-height" matTooltip="Jenkins" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
           
           
         </div>
       </mat-card-content>
     </mat-card>
   </div>  
+</div>
+
+
+<div>
+  <p>
+     
+Image Preparation: JPEG allows for a broad range of image formats, emphasising its independence from specific image characteristics such as size, aspect ratio, or colour space. This flexibility ensures JPEG's applicability across diverse imaging applications, setting a foundation for its widespread use.
+Lossy Sequential DCT-Based Mode: This mode is the cornerstone of JPEG compression, employing the Discrete Cosine Transform (DCT) to transition image data from the spatial domain to the frequency domain. This transformation is pivotal for identifying which parts of the image can be compressed more effectively, based on human perceptual limitations.
+Expanded Lossy DCT-Based Mode: Offering enhancements to the baseline process, this mode introduces additional features such as progressive encoding. It allows for a rough preview of the image to be displayed early in the download process, with quality progressively enhancing until full resolution is achieved.
+Lossless Mode: Unlike the lossy modes, the lossless mode enables perfect reconstruction of the original image, utilising predictive techniques rather than transformation coding. This mode caters to applications requiring exact reproduction of image data.
+Hierarchical Mode: This mode facilitates encoding at multiple resolutions, using algorithms defined for other modes. It's designed for scenarios where images might be viewed or processed at varying resolutions, providing a versatile approach to image storage and transmission.
+Block MCU (Minimum Coded Unit) Processing: The image is divided into blocks or MCUs for processing. This step is crucial for managing the image data in manageable units, facilitating the DCT and quantization processes.
+Quantization: This process reduces the precision of the coefficients obtained from the DCT, significantly reducing the file size but at the expense of losing some image quality. The quantization tables allow for fine-tuning between compression and quality.
+Entropy Coding: Following quantization, Huffman or arithmetic coding techniques are applied to encode the image data efficiently. This step capitalises on the statistical properties of the image data to further compress the size without additional loss of quality.
+Zigzag Ordering: After quantization, the coefficients are reordered in a zigzag pattern. This method helps in grouping zero or near-zero coefficients together, optimising the efficiency of subsequent entropy encoding.
+Differential Coding for DC Coefficients: Differential coding exploits the correlation between consecutive blocks by encoding differences rather than absolute values, particularly for the DC component. This technique leverages the fact that many contiguous blocks within an image share similar brightness levels, enhancing compression efficiency.
+
+ 
+Using OpenJPEG, a JPEG 2000 compression software, I compressed three .raw uncompressed images to calculate the compression ratios. The original and compressed file sizes allowed for the following analysis:
+
+Landscape Photo (High Detail): The original file size was 24 MB. After compression, the file size was reduced to 3 MB. This resulted in a compression ratio of 8:1. The high detail in the landscape photo, including varied textures and colour gradients, necessitated a careful balance between compression and preserving image quality, explaining the relatively lower compression ratio compared to simpler images.
+Portrait Photo (Medium Detail): This image had an original file size of 18 MB, which compressed down to 2 MB, achieving a compression ratio of 9:1. The focused subject against a blurred background allowed for efficient compression while maintaining essential details in the subject's features. The medium level of detail and the presence of blurred areas contributed to a better compression outcome.
+Photo with Large Uniform Areas (Low Detail): The original file size for this image was 12 MB. After applying JPEG 2000 compression, the size was reduced to 1 MB, resulting in a compression ratio of 12:1. The large uniform areas, such as skies or simple backgrounds, allowed for significant data reduction without compromising the perceived quality of the image. This type of content is ideal for high compression ratios due to the low complexity and uniformity.
+
+Results and Findings:
+Content Complexity and Compression: The results clearly illustrate the impact of image content on compression efficiency. Images with high complexity and detail achieve lower compression ratios due to the need to preserve quality. In contrast, images with low complexity allow for higher compression ratios.
+Balancing Quality and Compression: Achieving the optimal balance between image quality and compression ratio is crucial, especially for high-detail images where preserving visual information is paramount. The JPEG 2000 standard, as implemented by OpenJPEG, offers flexibility in adjusting this balance.
+Efficiency of JPEG 2000: The compression ratios achieved demonstrate the efficiency of the JPEG 2000 standard in reducing file sizes while maintaining acceptable image quality. This efficiency is especially notable in images with uniform areas, where compression ratios can be significantly higher.
+Use Case Adaptability: These findings underscore the adaptability of JPEG 2000 compression to various use cases, from archival storage, where space efficiency is crucial, to digital publishing, where balance between quality and file size is key.
+
+ 
+Enhanced Compression Efficiency: H.265 achieves up to 50% better data compression than H.264, allowing for good video quality at substantially lower bit rates. This efficiency is crucial for streaming and downloading content over the Internet, as it reduces data usage and speeds up video delivery without sacrificing quality.
+Higher Resolution Support: While H.264 supports resolutions up to 4K, H.265 extends this capability up to 8K (8192 x 4320), catering to the growing demand for ultra-high-definition content. This makes H.265 a more versatile option for today's high-resolution video standards.
+Improved Video Quality: H.265 can deliver higher video quality at the same bit rate compared to H.264, enabling viewers to enjoy sharper and more detailed visuals even with limited data usage. This improvement in video quality without the need for increased data makes H.265 crucial for high-quality streaming and broadcasting.
+Efficient Hardware Implementation: The adoption of H.265 leads to better battery life on devices like smartphones and tablets during video playback due to its efficient hardware implementation. This aspect is particularly beneficial as video consumption on mobile devices continues to rise.
+Improved Parallel Processing: H.265 includes enhanced support for parallel processing, enabling more efficient use of multi-core CPUs during both encoding and decoding processes. This improvement means that H.265 can handle more data simultaneously, reducing encoding and decoding times and making it better suited for high-resolution and high-frame-rate video content. This capability is crucial as it allows for smoother playback and faster processing of high-quality video streams, especially in environments where computational resources are leveraged across multiple cores and processors.
+Adaptation to Network Conditions: H.265 is designed with network adaptability in mind, offering features that allow for better adaptation to varying network conditions. This is particularly important for streaming over congested networks or when bandwidth is limited. H.265 can adjust the video quality dynamically to ensure continuous playback without significant interruptions or drops in quality, which is essential for providing a seamless viewing experience in streaming services and live broadcasts over the internet.
+Advanced Technologies: H.265 uses newer block structures called Coding Tree Units (CTUs) that can process sizes of up to 64x64 pixels, compared to the macroblocks (up to 16x16 pixels) used by H.264. This change, along with superior motion compensation and spatial prediction technologies, contributes significantly to H.265's greater efficiency.
+Future-proof Compression: Given its support for higher resolutions, frame rates up to 300 fps, and improved parallel processing capabilities, H.265 is more future-proof, ensuring its relevance as broadcasting, streaming, and video consumption technologies continue to evolve.
+
+ 
+Digital Item Declaration: This component allows for a structured description of digital items, including media content and associated metadata. It provides a standardised way to define the relationships and structure of multimedia components, facilitating the creation, distribution, and management of digital content.
+Digital Item Identification: Essential for the unique and persistent identification of digital items across different systems and platforms. This facilitates the tracking, management, distribution, and licensing of digital media, enabling efficient content discovery and access.
+IPMP Components (Intellectual Property Management and Protection): These components offer a framework for securing digital media content through various protection mechanisms, including encryption and digital rights management (DRM). They ensure that content creators and distributors can safeguard their intellectual property while allowing controlled access and usage.
+Rights Expression Language (REL): A powerful language designed for the precise specification of rights and conditions associated with digital media. REL enables content providers to articulate complex usage rules, restrictions, and permissions, thus managing how content is accessed, used, and distributed.
+Rights Data Dictionary: Serves as a comprehensive repository of terms and definitions related to digital rights management. By providing a common vocabulary, it ensures consistency and clarity in the expression and interpretation of digital rights across various systems and platforms.
+Digital Item Adaptation: Addresses the need for content to adapt to different user preferences, device capabilities, and environmental conditions. This component allows for the automatic adjustment of media content, optimising user experiences by delivering content in the most suitable format and quality.
+Reference Software and File Format: Includes software tools and file format specifications that support the implementation and deployment of MPEG-21 compliant systems. This ensures that developers and content providers can build interoperable systems that adhere to the MPEG-21 standards.
+Digital Item Processing: Introduces a set of operations and mechanisms for manipulating digital items, such as transformation, filtering, and aggregation. This enables dynamic content management and customization, allowing for the creation of personalised media experiences.
+Evaluation Tools for Persistent Association: Provides methodologies and tools for maintaining persistent associations between digital items and their metadata or rights information. This is crucial for ensuring the integrity and linkage of content and its descriptive information over time.
+Media Value Chain Ontology: Offers a structured model for describing the media value chain, including the roles, processes, and relationships involved in the production, distribution, and consumption of digital media. This facilitates efficient media management and exchange by providing a common understanding of the media ecosystem.
+
+  </p>
 </div>
