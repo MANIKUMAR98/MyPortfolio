@@ -3,6 +3,10 @@
 @import 'tailwindcss/utilities';
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@fortawesome/fontawesome-free/css/all.css";
+// @import url('https://fonts.cdnfonts.com/css/poppins');
+
+
 
 html {
     padding: 0;
@@ -19,4 +23,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .icon-height {
   height: 5rem;
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
