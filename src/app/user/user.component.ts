@@ -24,10 +24,13 @@ declare var VANTA : any;
 export class UserComponent {
   @ViewChild('typingElement', { static: false }) typingElement!: ElementRef;
 
-  isOpen = true;
+  boeingCard = true;
+  ctsCard = false
   data: any = '';
-  boeingtechStack = ['Java', 'Angular', 'Spring Boot', 'OpenShift', 'Azure', 'MS SQL']
-  cardBackgroundColor = "#740cdc"
+  boeingtechStack = ['Java', 'Angular', 'Spring Boot', 'Kubernetes', 'Azure', 'MS SQL']
+  ctstechStack = ['Java', 'Kafka', 'Python', 'OpenShift', 'Jenkins', 'Splunk']
+  boeingBackgroundColor = "#740cdc"
+  ctsBackgroundColor = "#490C86DE"
 
   ngAfterViewInit(): void {
     this.initTyped();
@@ -76,12 +79,21 @@ export class UserComponent {
   }
 
   onclick(event:any) {
-    this.isOpen = !this.isOpen;
-    if(this.cardBackgroundColor == "#490C86DE") {
-      this.cardBackgroundColor = "#740cdc"
+    if(event == 'CTS') {
+      this.ctsCard = !this.ctsCard
+      if(this.ctsBackgroundColor == "#490C86DE") {
+        this.ctsBackgroundColor = "#740cdc"
+      } else {
+        this.ctsBackgroundColor = "#490C86DE"
+      }
     } else {
-      this.cardBackgroundColor = "#490C86DE"
-    }
+      this.boeingCard = !this.boeingCard;
+      if(this.boeingBackgroundColor == "#490C86DE") {
+        this.boeingBackgroundColor = "#740cdc"
+      } else {
+        this.boeingBackgroundColor = "#490C86DE"
+      }
+    }  
   }
 
 }
