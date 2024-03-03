@@ -32,14 +32,15 @@
   </div>
 
   <!-- SKills -->
-<div #target class="mt-32 flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500  text-transparent bg-clip-text bg-300% animate-gradient">
+<div style="margin-top: 26.5%; ">
+  <div #target class="flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500  text-transparent bg-clip-text bg-300% animate-gradient">
     Technical Skills
 </div>
 <div class="flex justify-center mt-1">
   <img src="https://demo.templateflip.com/super/images/marker.svg"/>
 </div>
 <div class="mt-12 ml-12 mr-12 mb-16 flex justify-start flex-wrap justify-evenly">
-  <div [class.mat-elevation-z8] = "true" class="mb-8">
+  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
     <mat-card appMaterialElevation>
       <mat-card-header class="mb-2">
         <mat-card-title class="!font-semibold tracking-wide">Programming Languages</mat-card-title>
@@ -47,7 +48,7 @@
       <mat-divider></mat-divider>
       <mat-card-content >
         <div class="flex justify-start mt-6 space-x-6">
-          <img class="icon-height" matTooltip="JAVA" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+          <img data-aos="zoom-in" data-aos-duration="1300" class="icon-height" matTooltip="JAVA" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
             
           <img class="icon-height" matTooltip="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />   
   
@@ -61,7 +62,7 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div [class.mat-elevation-z8] = "true" class="mb-8">
+  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
     <mat-card appMaterialElevation>
       <mat-card-header class="mb-2">
         <mat-card-title class="!font-semibold tracking-wide">Frameworks</mat-card-title>
@@ -82,7 +83,7 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <div [class.mat-elevation-z8] = "true" class="mb-8">
+  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
     <mat-card appMaterialElevation>
       <mat-card-header class="mb-2">
         <mat-card-title class="!font-semibold tracking-wide">Containerization & Cloud</mat-card-title>
@@ -103,7 +104,7 @@
     </mat-card>
   </div>     
 
-  <div [class.mat-elevation-z8] = "true" class="mb-8">
+  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
     <mat-card appMaterialElevation>
       <mat-card-header class="mb-2">
         <mat-card-title class="!font-semibold tracking-wide">Database</mat-card-title>
@@ -125,7 +126,7 @@
     </mat-card>
   </div>  
 
-  <div [class.mat-elevation-z8] = "true" class="mb-8">
+  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
     <mat-card appMaterialElevation>
       <mat-card-header class="mb-2">
         <mat-card-title class="!font-semibold tracking-wide">Developer Tools</mat-card-title>
@@ -148,7 +149,7 @@
     </mat-card>
   </div>  
 
-  <div [class.mat-elevation-z8] = "true" class="mb-8">
+  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
     <mat-card appMaterialElevation>
       <mat-card-header class="mb-2">
         <mat-card-title class="!font-semibold tracking-wide">Others</mat-card-title>
@@ -176,10 +177,11 @@
     </mat-card>
   </div>  
 </div>
+</div>
 
 <!-- Work Expeience -->
 <!-- style="background-color: #201d1d;" -->
-<div class="h-full bg-color-work-exp" >
+<div  class="h-full bg-color-work-exp" >
   <div #target class="pt-16 flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500 text-transparent bg-clip-text bg-300% animate-gradient">
     Work Experience
   </div>
@@ -187,7 +189,7 @@
     <img src="https://demo.templateflip.com/super/images/marker.svg"/>
   </div>
 
-  <div class="mt-12">
+  <div data-aos="fade-up" data-aos-duration="1500" class="mt-12">
     <div (click) = "onclick('boeing')" class="flex justify-center">
       <mat-card [style.background-color]="boeingBackgroundColor" style="min-height: 54px; width: 56%;">
         <mat-card-header>
@@ -237,7 +239,7 @@
   </div>
   
 
-  <div class="mt-6">
+  <div class="mt-6" data-aos="fade-up" data-aos-duration="1500">
     <div (click) = "onclick('CTS')" class="flex justify-center">
       <mat-card [style.background-color]="ctsBackgroundColor" style="min-height: 54px; width: 56%;">
         <mat-card-header>
@@ -286,4 +288,3 @@
     </div>
   </div>
 </div>
-

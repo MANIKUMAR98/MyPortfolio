@@ -2,7 +2,9 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { HttpClient } from '@angular/common/http';
 import { Component, ViewChild, NgZone,  ElementRef, HostListener } from '@angular/core';
 import Typed from 'typed.js';
+import * as AOS from 'aos';
 declare var VANTA : any;
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -39,7 +41,7 @@ export class UserComponent {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 600.00,
+      minHeight: 850.00,
       minWidth: 500.00,
       scale: 1.00,
       scaleMobile: 1.00,
@@ -71,7 +73,8 @@ export class UserComponent {
   }
 
   ngOnInit(): void {
-  
+    AOS.init({disable: 'mobile'});//AOS - 2
+    AOS.refresh();
   }
   
   scroll(el: HTMLElement) {

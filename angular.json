@@ -36,10 +36,12 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/aos/dist/aos.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
             ],
             "scripts": [            
+              "./node_modules/aos/dist/aos.js",
               "./src/scripts/three.min.js",
               "./src/scripts/vanta.net.min.js" 
             ]
@@ -104,6 +106,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
             "scripts": []
