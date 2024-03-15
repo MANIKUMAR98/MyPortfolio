@@ -3,18 +3,23 @@
 }
 
 .name {
-    color: #ddd2d2;
     padding-top: 15%;
     font-family: sans-serif;
     font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: color .3s;
 }
 
 .about {
-    color: #ddd2d2;
     font-size: 18px;
     width: 77%;
     font-family: inherit;
     text-align: justify;
+    color: #333;
+    letter-spacing: 1px;
+    transition: color .3s;
 }
 
 .profile-pic-container {
@@ -27,23 +32,22 @@
   
   .profile-pic {
     width: 100%;
-    height: 156%;
+    height: 215%;
     object-fit: cover; /* Maintain aspect ratio and cover the container */
   }
 
   .nav-bar {
-    display: flex; 
-    color: #ddd2d2;
-    justify-content: space-evenly;
-    padding-top: 4% !important;
-    width: 100%;
-    text-transform: uppercase;
-    margin-left: -4.5%;
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: color .3s;
   }
 
   .nav-text:hover {
-    border-bottom: 2px solid red;
-    color: whitesmoke;
+    // border-bottom: 2px solid red;
+    color: rgb(185, 185, 114);
   }
 
 
@@ -52,58 +56,56 @@
     transform: translate3d(0,0,0);
     transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
   }
-  
-  .bg-color-work-exp {
-    background-color: rgb(15, 23, 42);
+
+  .user-background {
+    background-image: linear-gradient(to right, #a7f3d0, #a7cdf3);
+    height: 100% !important;
   }
 
-  .bg-color-work-exp-desc {
-    background-color: #241d41;
+  .nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      width: 100%;
   }
 
-  .work-exp-heading {
-    font-size: 1.10rem;
-    line-height: 1.3;
-    letter-spacing: 0;
-    font-weight: 600;
-    font-family: 'Poppins';
+  .scrolled {
+    // background-color: whitesmoke;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    // border-bottom: 1px solid red;
+    background-image: linear-gradient(to right, #a7f3d0, #a7cdf3);
   }
 
-  .work-exp-icons {
-    color: #b7f;
-    font-size: 20px;
-    margin-left: 6px;
+  .hire-btn {
+    background-color: black;
+    color: white;
+    margin-right: 3%;
+    width: 10%;
+    height: 41px;
+    font-size: 1.08rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 2%;
+    cursor: pointer;
   }
 
-  .work-location {
-    font-family: 'RobotoMono';
-    font-weight: 400; 
-    margin-left: 10px;
-    color: #c2bdbd;
-    margin-top: 1px;
-    font-size: 15px;
+  .resume-btn {
+    background-color: white;
+    color: black;
+    margin-right: 2%;
+    height: 41px;
+    font-size: 1.08rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 2%;
   }
 
-  .work-desc {
-    font-family: 'RobotoMono' !important;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 4%;
-    margin-left: 2%;
-    word-wrap: break-word;
-    text-align: justify;
-    color: #e5e3e3;
-  }
-
-  .mat-mdc-standard-chip {
-    --mdc-chip-label-text-color: #cec7c7;
-  }
-
-  ::ng-deep  .mat-mdc-standard-chip .mdc-evolution-chip__text-label {
-    font-family: 'RobotoMono' !important;
-  }
-
-  ::ng-deep .mat-chip-text {
-    background-color: #2c3599 !important;
-    
-  }
+  ////////// Exp ///////////// 
+.exp {
+  height: 100vh;
+  background-color: rgb(15, 23, 42);
+}

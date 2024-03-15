@@ -1,0 +1,51 @@
+<div>
+    <div #target class="pt-16 flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500 text-transparent bg-clip-text bg-300% animate-gradient">
+      Work Experience
+    </div>
+    <div class="flex justify-center mt-1 mb-16">
+      <img src="https://demo.templateflip.com/super/images/marker.svg"/>
+    </div>
+    
+    <div *ngFor="let data of workExpData" class="mb-8">
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <div (click) = "onclick(data)" class="flex justify-center">
+          <div [style.background-color]="data.showCard ? '#740cdc' : '#490C86DE'" class="card-header">
+            <div class="w-full cursor-pointer flex justify-between text-zinc-50 work-exp-heading">
+              <div class="work-exp-heading ml-2">
+                {{data.position}} @ {{data.companyName}}
+              </div>
+              <div class="flex justify-between">
+                <div>
+                  {{data.duration}}
+                </div>
+                <div class="mt-0.5 ml-8 mr-2">
+                  <ion-icon *ngIf="!data.showCard" name="add-outline" style="color: white"></ion-icon>
+                  <ion-icon *ngIf="data.showCard" name="remove-outline" style="color: white"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div [@slideUpDown]="data.showCard ? 'open' : 'closed'" class="flex justify-center mt-4">
+          <div class="work-exp-desc">
+              <div class="flex" style="margin-left: 1.5%; margin-top: 1%">
+                <ion-icon name="location" class="work-exp-icons"></ion-icon>
+                <div class="work-location mt-0.4">{{data.location}}</div>
+              </div>
+              <div class="flex w-full">
+                <div class="work-desc">
+                  {{data.description}}
+                </div>
+                <div style="width: 20%; margin-left: 5%;">
+                  <img style="width: 90%;" src="{{data.logo}}" />
+                </div>
+              </div>
+              <div class="flex mt-3 ml-2 flex-wrap tracking-[.1em]">
+                <div *ngFor="let tech of data.skills" class="mr-2">
+                  <div class="chip">{{tech}}</div>
+               </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>

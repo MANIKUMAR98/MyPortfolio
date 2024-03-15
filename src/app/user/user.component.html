@@ -1,290 +1,53 @@
 
 
-  <div #about id=vanta style="margin-top: -1.5%;">
-    <div class="nav-bar text-lg tracking-wider absolute z-10">
-      <div class="cursor-pointer nav-text" (click)="scroll(about)">About</div>
-      <div class="cursor-pointer nav-text" (click)="scroll(target)">My Skills</div>
-      <div class="cursor-pointer nav-text">Work Experience</div>
-      <div class="cursor-pointer nav-text">Projects</div>
-      <div class="cursor-pointer nav-text">Contact Me</div>
+  <div id="about" class="user-background">
+    <div data-aos="fade-down" data-aos-duration="1300" class="flex justify-between nav nav-background">
+      <div style="display: flex;" class="text-lg source-san font-semibold	items-center tracking-[.06em] nav-bar ml-[3rem] text-[1.3rem]">
+        <div style="width: 10%;"><img src="favicon.png" alt="Profile Picture"></div>
+        <div class="ml-2">{{navbarData.userName}}</div>
+      </div>
+      <div class="flex">
+        <div *ngFor="let navbar of navbarData.data" class="nav-bar source-sans font-normal text-[1.15rem]" (click)="scroll(navbar.target)">
+          <div class="cursor-pointer nav-text">{{navbar.name}}</div>
+        </div>
+      </div>
     </div>
-    <div style="margin-left: 6%; display: flex; margin-right: 9%; padding-top: 6%;">
+    <div style="margin-left: 6%; display: flex; margin-right: 9%; padding-top: 6%;" data-aos="fade-up" data-aos-duration="1300">
         <div>
           <div class="typing-container">
             <h1 class="name !text-3xl">
               <span #typingElement></span>
             </h1>
           </div>
-          <div class="about tracking-wider mt-5">
-            <p>Hi!,</p>
-            <p  style="line-height: 30px; font-weight: 600 !important; font-family: silka;">
+          <div class="about tracking-wider mt-5 source-sans">
+            <p >Hi!,</p>
+            <p  style="line-height: 30px; font-weight: 600 !important;">
               I'm graduate student currently pursuing a Master of Science in Computer Science at the University of Florida. I bring with me a robust foundation as a software developer, well-versed in programming languages such as Java, Python, and JavaScript. Additionally, I have hands-on experience with containerization technologies like Docker and orchestration tools like Kubernetes, Openshift. My journey in technology is a continuous quest for new challenges, driven by curiosity, and a commitment to expanding my skill set.
             </p>
           </div>
         </div>
         <div>
           <div class="profile-pic-container">
-            <img src="assets/images/profile_pic.jpeg" alt="Profile Picture" class="profile-pic">
+            <img src="assets/images/Subject.png" alt="Profile Picture" class="profile-pic">
           </div>
         </div>
+      </div>
+      <div class="!flex" style="margin-left: 6%;" data-aos="fade-up" data-aos-duration="1300">
+        <button class="hire-btn source-sans">Hire Me</button>
+        <div style="display: flex; width: 10%; justify-content: center; cursor: pointer;" class="resume-btn source-sans">
+          <button >Resume </button>
+          <img style="width: 20%; margin-left: 5%;" src="assets/images/svg/download_btn.svg">
+        </div>
+        
       </div>
 
   </div>
 
-  <!-- SKills -->
-<div style="margin-top: 26.5%; ">
-  <div #target class="flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500  text-transparent bg-clip-text bg-300% animate-gradient">
-    Technical Skills
-</div>
-<div class="flex justify-center mt-1">
-  <img src="https://demo.templateflip.com/super/images/marker.svg"/>
-</div>
-<div class="mt-12 ml-12 mr-12 mb-16 flex justify-start flex-wrap justify-evenly">
-  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
-    <mat-card appMaterialElevation>
-      <mat-card-header class="mb-2">
-        <mat-card-title class="!font-semibold tracking-wide">Programming Languages</mat-card-title>
-      </mat-card-header>
-      <mat-divider></mat-divider>
-      <mat-card-content >
-        <div class="flex justify-start mt-6 space-x-6">
-          <img data-aos="zoom-in" data-aos-duration="1300" class="icon-height" matTooltip="JAVA" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
-            
-          <img class="icon-height" matTooltip="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />   
-  
-          <img class="icon-height" matTooltip="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
-            
-          <!-- <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" /> -->
-            
-          <img class="icon-height" matTooltip="C++" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-            
-        </div>
-      </mat-card-content>
-    </mat-card>
+  <div id="skills">
+    <app-skills></app-skills>
   </div>
-  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
-    <mat-card appMaterialElevation>
-      <mat-card-header class="mb-2">
-        <mat-card-title class="!font-semibold tracking-wide">Frameworks</mat-card-title>
-      </mat-card-header>
-      <mat-divider></mat-divider>
-      <mat-card-content>
-        <div class="flex justify-start mt-6 space-x-6">
-  
-          <img class="icon-height" matTooltip="Spring Boot" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
-         
-          <img class="icon-height" matTooltip="Angular" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" />
-            
-          <img class="icon-height" matTooltip="Django" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" />
-            
-          <img class="icon-height" matTooltip="Node.js" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-            
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
-    <mat-card appMaterialElevation>
-      <mat-card-header class="mb-2">
-        <mat-card-title class="!font-semibold tracking-wide">Containerization & Cloud</mat-card-title>
-      </mat-card-header>
-      <mat-divider></mat-divider>
-      <mat-card-content>
-        <div class="flex justify-start mt-6 space-x-6">
-          <img class="icon-height" matTooltip="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
-            
-          <img class="icon-height" matTooltip="Kubernetes" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original-wordmark.svg" />
-            
-          <img class="icon-height" matTooltip="Openshift" src="assets/images/openshift-svgrepo-com.svg" />
-  
-          <img class="icon-height" matTooltip="Azure" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
-            
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>     
-
-  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
-    <mat-card appMaterialElevation>
-      <mat-card-header class="mb-2">
-        <mat-card-title class="!font-semibold tracking-wide">Database</mat-card-title>
-      </mat-card-header>
-      <mat-divider></mat-divider>
-      <mat-card-content>
-        <div class="flex justify-start mt-6 space-x-6">
-          
-          <img class="icon-height" matTooltip="MS SQL Server" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original-wordmark.svg" />
-            
-          <img class="icon-height" matTooltip="My SQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
-            
-          <img class="icon-height" matTooltip="SQLite" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg" />
-            
-          <img class="icon-height" matTooltip="MangoDB" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
-            
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>  
-
-  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
-    <mat-card appMaterialElevation>
-      <mat-card-header class="mb-2">
-        <mat-card-title class="!font-semibold tracking-wide">Developer Tools</mat-card-title>
-      </mat-card-header>
-      <mat-divider></mat-divider>
-      <mat-card-content>
-        <div class="flex justify-start mt-6 space-x-6 flex-wrap">
-          
-          
-          <img class="icon-height" matTooltip="GIT" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg" />
-          
-          <img class="icon-height" matTooltip="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
-          
-          <img class="icon-height" matTooltip="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
-          
-          <img class="icon-height" matTooltip="VS Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" />
-           
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>  
-
-  <div data-aos="fade-up" data-aos-duration="1300" [class.mat-elevation-z8] = "true" class="mb-8">
-    <mat-card appMaterialElevation>
-      <mat-card-header class="mb-2">
-        <mat-card-title class="!font-semibold tracking-wide">Others</mat-card-title>
-      </mat-card-header>
-      <mat-divider></mat-divider>
-      <mat-card-content>
-        <div class="flex justify-start mt-6 space-x-6 flex-wrap">
-          
-          
-          <img class="icon-height" matTooltip="Apache Kafka" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original-wordmark.svg" />
-          
-          <img class="icon-height" matTooltip="RabbitMQ" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original-wordmark.svg" />
-          
-          <img class="icon-height" matTooltip="Splunk" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/splunk/splunk-original-wordmark.svg" />
-          
-          <!-- <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
-          
-          <img class="icon-height" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
-           -->
-          <img class="icon-height" matTooltip="Jenkins" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
-          
-          
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>  
-</div>
-</div>
 
 <!-- Work Expeience -->
-<!-- style="background-color: #201d1d;" -->
-<div  class="h-full bg-color-work-exp" >
-  <div #target class="pt-16 flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500 text-transparent bg-clip-text bg-300% animate-gradient">
-    Work Experience
-  </div>
-  <div class="flex justify-center mt-1">
-    <img src="https://demo.templateflip.com/super/images/marker.svg"/>
-  </div>
-
-  <div data-aos="fade-up" data-aos-duration="1500" class="mt-12">
-    <div (click) = "onclick('boeing')" class="flex justify-center">
-      <mat-card [style.background-color]="boeingBackgroundColor" style="min-height: 54px; width: 56%;">
-        <mat-card-header>
-          <div class="w-full cursor-pointer flex justify-between text-zinc-50 work-exp-heading">
-            <div class="work-exp-heading ml-2">
-              Java Full Stack Developer @ Boeing
-            </div>
-            <div class="flex justify-between">
-              <div>
-                2022 - 2023
-              </div>
-              <div class="mt-0.5 ml-8 mr-2">
-                <ion-icon *ngIf="!boeingCard" name="add-outline" style="color: white"></ion-icon>
-                <ion-icon *ngIf="boeingCard" name="remove-outline" style="color: white"></ion-icon>
-              </div>
-            </div>
-          </div>
-        </mat-card-header>
-      </mat-card>
-    </div>
-    <div [@slideUpDown]="boeingCard ? 'open' : 'closed'" class="flex justify-center mt-4">
-      <mat-card class="bg-color-work-exp-desc" style="color: white; width: 56% !important;">
-        <mat-card-content>
-          <div class="flex">
-            <div style="width: 100%;">
-              <div class="flex">
-                <ion-icon name="location" class="work-exp-icons"></ion-icon>
-                <div class="work-location mt-0.4">Banglore, India</div>
-              </div>
-              <div class="work-desc">
-                Involved in development of MyBoeingFleet application, a digital marketplace for airline customers. 
-                And migrated services to OpenShift for efficiency.
-              </div>
-              <div class="flex mt-6 ml-2 flex-wrap">
-                <div *ngFor="let tech of boeingtechStack" class="mr-2">
-                  <mat-chip class="mat-chip-text">{{tech}}</mat-chip>
-               </div>
-              </div>
-            </div>
-            <div>
-              <img style="margin-left: 20%; width: 80%;" src="assets/images/Boeing.png" />
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-  
-
-  <div class="mt-6" data-aos="fade-up" data-aos-duration="1500">
-    <div (click) = "onclick('CTS')" class="flex justify-center">
-      <mat-card [style.background-color]="ctsBackgroundColor" style="min-height: 54px; width: 56%;">
-        <mat-card-header>
-          <div class="w-full cursor-pointer flex justify-between text-zinc-50 work-exp-heading">
-            <div class="work-exp-heading ml-2">
-              Software Engineer @ Cognizant
-            </div>
-            <div class="flex justify-between">
-              <div>
-                2019 - 2022
-              </div>
-              <div class="mt-0.5 ml-8 mr-2">
-                <ion-icon *ngIf="!ctsCard" name="add-outline" style="color: white"></ion-icon>
-                <ion-icon *ngIf="ctsCard" name="remove-outline" style="color: white"></ion-icon>
-              </div>
-            </div>
-          </div>
-        </mat-card-header>
-      </mat-card>
-    </div>
-    <div [@slideUpDown]="ctsCard ? 'open' : 'closed'" class="flex justify-center mt-4">
-      <mat-card class="bg-color-work-exp-desc" style="color: white; width: 56% !important;">
-        <mat-card-content>
-          <div class="flex">
-            <div style="width: 100%;">
-              <div class="flex">
-                <ion-icon name="location" class="work-exp-icons"></ion-icon>
-                <div class="work-location mt-0.4">Pune, India</div>
-              </div>
-              <div class="work-desc">
-                Involved in development of MyBoeingFleet application, a digital marketplace for airline customers. 
-                And migrated services to OpenShift for efficiency.
-              </div>
-              <div class="flex mt-6 ml-2 flex-wrap">
-                <div *ngFor="let tech of ctstechStack" class="mr-2">
-                  <mat-chip class="mat-chip-text">{{tech}}</mat-chip>
-               </div>
-              </div>
-            </div>
-            <div>
-              <img style="margin-left: 18%; width: 85%; margin-top: 8%;" src="assets/images/Cognizant.svg" />
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
+<div id="work" class="exp">
+  <app-work-experience></app-work-experience>
 </div>

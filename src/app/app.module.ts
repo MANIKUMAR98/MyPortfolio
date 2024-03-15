@@ -10,11 +10,16 @@ import { MaterialModule } from './material.module';
 import { MaterialElevationDirective } from './material-elevation.directive';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { SkillsComponent } from './skills/skills.component';
+import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { AppServiceService } from './services/app-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
+    SkillsComponent,
+    WorkExperienceComponent,
     MaterialElevationDirective
   ],
   imports: [
@@ -26,7 +31,7 @@ import { IonicModule } from '@ionic/angular';
     FormsModule,
     IonicModule.forRoot()
   ],
-  providers: [],
+  providers: [AppServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
