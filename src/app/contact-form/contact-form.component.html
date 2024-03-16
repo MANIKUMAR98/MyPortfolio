@@ -1,0 +1,32 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<div class="pt-16 flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500 text-transparent bg-clip-text bg-300% animate-gradient">
+    Contact Me
+  </div>
+  <div class="flex justify-center mt-1 mb-16">
+    <img src="https://demo.templateflip.com/super/images/marker.svg"/>
+  </div>
+  <div id="contact" class="container m-auto mt-16">
+  
+    <!-- card -->
+    <div data-aos="zoom-in" data-aos-duration="1300" class="card-wrapper  w-[90%] sm:w-[100%] mx-auto mt-16 flex items-center justify-center sm:flex-col">
+      <div class="right flex-1" style="width: 50%;">
+          <form (submit)="send($event)" class="flex justify-center items-center flex-col gap-5 w-[70%] md:w-[100%] sm:w-[95%] mx-auto mb-16">
+            <input style="height: 7vh;" class="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full" type="email"
+                   placeholder="Email" name="from_email"  />
+            <input style="height: 7vh;" class="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full" type="text"
+                   placeholder="Name" name="from_name"/>
+            <textarea style="height: 30vh;" class="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full" rows="4" cols="50"
+                      placeholder="Write your message" name="message"></textarea>
+            <button style="height: 7vh;" class="bg-yellow-500 w-full text-white font-semibold  p-2 rounded-lg flex items-center justify-center space-x-1"
+                    type="submit">
+              <div class="!flex" style="width: 26%;">
+                  <div style="font-size: 20px;">Send Message </div>
+                  <ion-icon name="send" style="margin-left: 3%; font-size: 22px;"></ion-icon>
+              </div>
+            </button>
+          </form> 
+      </div>
+    </div>
+  </div>
+  
+  

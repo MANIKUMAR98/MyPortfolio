@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,18 @@ export class AppServiceService {
 
   getWorkExpData() {
     return this.http.get<any>('assets/data/work-exp.json');
+  }
+
+  public sendEmail(e: Event) {
+    e.preventDefault();
+    return emailjs.sendForm('service_kvu3tw2', 'template_oemvesc', e.target as HTMLFormElement, 'ZcQa8W0wOQUYIwJlV')
+      // .then(
+      //   (result: EmailJSResponseStatus) => {
+      //     console.log(result.text);
+      //   },
+      //   (error) => {
+      //     console.log(error.text);
+      //   }
+      // );
   }
 }

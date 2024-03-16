@@ -45,7 +45,13 @@ export class UserComponent {
   scroll(targetId: any) {
       let element = document.getElementById(targetId);
       if(element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+        // Scroll to the element with an offset for the navigation bar
+        window.scrollTo({
+            top: element.offsetTop - 90,
+            behavior: 'smooth'
+        });
+        
+          // element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       }
   }
 }
