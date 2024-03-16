@@ -25,7 +25,7 @@ export class UserComponent {
       strings: ['Manikumar Honnenahalli Lakshminarayana Swamy  '],
       typeSpeed: 80, 
       backSpeed: 30, 
-      showCursor: false, 
+      showCursor: true, 
     };
 
     new Typed(this.typingElement.nativeElement, options);
