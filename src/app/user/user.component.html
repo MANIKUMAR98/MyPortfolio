@@ -2,9 +2,9 @@
 
   <div id="about" class="user-background">
     <div data-aos="fade-down" data-aos-duration="1300" class="flex justify-between nav nav-background">
-      <div style="display: flex; cursor: pointer;" class="text-lg source-san font-semibold	items-center tracking-[.06em] nav-bar ml-[3rem] text-[1.3rem]">
-        <div (click)="scroll('about')" style="width: 10%;"><img src="favicon.png" alt="Profile Picture"></div>
-        <div (click)="scroll('about')" class="ml-2">{{navbarData.userName}}</div>
+      <div style="display: flex; " class="text-lg source-san font-semibold	items-center tracking-[.06em] nav-bar ml-[3rem] text-[1.3rem]">
+        <div (click)="scroll('about')" style="width: 10%; cursor: pointer;"><img src="favicon.png" alt="Profile Picture"></div>
+        <div (click)="scroll('about')" style="cursor: pointer;" class="ml-2">{{navbarData.userName}}</div>
       </div>
       <div class="flex">
         <div *ngFor="let navbar of navbarData.data" class="nav-bar source-sans font-normal text-[1.15rem]" (click)="scroll(navbar.target)">
