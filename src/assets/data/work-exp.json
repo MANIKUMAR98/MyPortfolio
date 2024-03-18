@@ -17,7 +17,7 @@
             "position": "Software Engineer",
             "duration": "2019-2022",
             "location": "Pune, India",
-            "description": "Advanced Order Management System application, achieving a 20% enhancement in responsiveness. Spearheaded transformative projects, resulting in a 35% increase in operational agility. Developed the Peak Metrics Dashboard, reducing manual hours during peak seasons.",
+            "description": "Optimized Order Management System with Java, Angular, Spring Boot, Azure, SQL, Kubernetes, and ActiveMQ, achieving 20% responsiveness boost. Automated data migration reduced workload by 60%.",
             "skills": [
                 "Java", "Python", "Kafka", "Docker", "Angular", "Splunk"
             ],

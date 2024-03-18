@@ -33,7 +33,7 @@ export class WorkExperienceComponent {
 
 
   ngOnInit(): void {
-    AOS.init({disable: 'mobile'});//AOS - 2
+    AOS.init();
     AOS.refresh();
   }
 

@@ -1,7 +1,7 @@
 
 
   <div id="about" class="user-background">
-    <div data-aos="fade-down" data-aos-duration="1300" class="flex justify-between nav nav-background">
+    <div data-aos="fade-down" data-aos-duration="1300" data-aos-once="true" class="flex justify-between nav nav-background">
       <div style="display: flex; " class="text-lg source-san font-semibold	items-center tracking-[.06em] nav-bar ml-[3rem] text-[1.3rem]">
         <div (click)="scroll('about')" style="width: 10%; cursor: pointer;"><img src="favicon.png" alt="Profile Picture"></div>
         <div (click)="scroll('about')" style="cursor: pointer;" class="ml-2">{{navbarData.userName}}</div>
@@ -12,8 +12,13 @@
         </div>
       </div>
     </div>
-    <div style="margin-left: 6%; display: flex; margin-right: 9%; padding-top: 6%;" data-aos="fade-up" data-aos-duration="1300">
-        <div>
+    <div style="margin-left: 6%; display: flex; margin-right: 9%; padding-top: 6%;" data-aos="fade-up" data-aos-once="true" data-aos-duration="1300"> 
+      <div>
+        <div style="display: flex; justify-content: center;">
+          <div class="profile-pic-container-mobile">
+            <img src="assets/images/Subject.png" alt="Profile Picture" class="profile-pic">
+          </div> 
+        </div>
           <div class="typing-container">
             <h1 class="name !text-3xl">
               <span #typingElement></span>
@@ -32,9 +37,9 @@
           </div>
         </div>
       </div>
-      <div class="!flex" style="margin-left: 6%;" data-aos="fade-up" data-aos-duration="1300">
+      <div class="!flex" style="margin-left: 6%;" data-aos="fade-up" data-aos-once="true" data-aos-duration="1300">
         <button class="hire-btn source-sans" onclick="window.open('https://www.linkedin.com/in/manikumar-honnenahalli-lakshminarayana-swamy-24a50a173/', '_blank')">Hire Me</button>
-        <div style="display: flex; width: 10%; justify-content: center; cursor: pointer;" class="resume-btn source-sans">
+        <div style="display: flex; width: 130px; justify-content: center; cursor: pointer;" class="resume-btn source-sans">
           <a href="assets/data/MANIKUMAR HONNENAHALLI LAKSHMINARAYANA SWAMY.pdf" download style="display: flex; align-items: center; justify-content: center;">Resume <img style="width: 20%; margin-left: 5%;" src="assets/images/svg/download_btn.svg"></a>
 
         </div>

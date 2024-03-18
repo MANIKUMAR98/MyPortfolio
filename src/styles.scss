@@ -43,3 +43,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .source-sans {
   font-family: 'Source Sans 3', sans-serif;
 }
+
+@media screen and (max-width: 550px) {
+  .icon-height {
+    width: 18%;
+  }
+}

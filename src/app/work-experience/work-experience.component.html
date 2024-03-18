@@ -2,14 +2,14 @@
     <div class="pt-16 flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500 text-transparent bg-clip-text bg-300% animate-gradient">
       Work Experience
     </div>
-    <div class="flex justify-center mt-1 mb-16">
+    <div class="flex justify-center mt-1 mb-8">
       <img src="https://demo.templateflip.com/super/images/marker.svg"/>
     </div>
     
-    <div *ngFor="let data of workExpData" class="mb-8">
-      <div data-aos="fade-up" data-aos-duration="1500">
+    <div *ngFor="let data of workExpData" class="mt-8">
+      <div data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
         <div (click) = "onclick(data)" class="flex justify-center">
-          <div [style.background-color]="data.showCard ? '#740cdc' : '#490C86DE'" class="card-header">
+          <div [style.background-color]="data.showCard ? '#740cdc' : '#490C86DE'" class="card-header" style="margin-left: 4%; margin-right: 4%;">
             <div class="w-full cursor-pointer flex justify-between text-zinc-50 work-exp-heading">
               <div class="work-exp-heading ml-2">
                 {{data.position}} @ {{data.companyName}}
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div [@slideUpDown]="data.showCard ? 'open' : 'closed'" class="flex justify-center mt-4">
+        <div [@slideUpDown]="data.showCard ? 'open' : 'closed'" class="flex justify-center mt-4" style="margin-left: 4%; margin-right: 4%;">
           <div class="work-exp-desc">
               <div class="flex" style="margin-left: 1.5%; margin-top: 1%">
                 <ion-icon name="location" class="work-exp-icons"></ion-icon>

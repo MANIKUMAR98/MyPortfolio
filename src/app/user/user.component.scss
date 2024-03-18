@@ -65,6 +65,12 @@
       width: 100%;
   }
 
+  @media screen and (max-width: 1069px) {
+    .nav {
+      display: none !important;
+    }
+  }
+
   .scrolled {
     // background-color: whitesmoke;
     backdrop-filter: blur(6px);
@@ -77,7 +83,7 @@
     background-color: black;
     color: white;
     margin-right: 3%;
-    width: 10%;
+    width: 130px;
     height: 41px;
     font-size: 1.08rem;
     border-radius: 8px;
@@ -101,4 +107,30 @@
 .exp {
   height: 100vh;
   background-color: rgb(15, 23, 42);
+}
+
+.profile-pic-container-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .profile-pic-container-mobile {
+    width: 200px;
+    height: 205px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .profile-pic-container { 
+    display: none !important;
+  }
+
+  .name {
+    padding-top: 4%;
+  }
+
+  .about {
+    width: 100%;
+  }
 }

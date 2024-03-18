@@ -21,16 +21,27 @@ export class UserComponent {
   }
 
   initTyped(): void {
-    const options = {
-      strings: ['Manikumar Honnenahalli Lakshminarayana Swamy  '],
-      typeSpeed: 80, 
-      backSpeed: 30, 
-      showCursor: true, 
-    };
+    let options = {};
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 900) {
+        options = {
+            strings: ['Manikumar H L'],
+            typeSpeed: 80, 
+            backSpeed: 30, 
+            showCursor: true
+        };
+    } else {
+        options = {
+            strings: ['Manikumar Honnenahalli Lakshminarayana Swamy'],
+            typeSpeed: 80, 
+            backSpeed: 30, 
+            showCursor: true
+        };
+    }
 
     new Typed(this.typingElement.nativeElement, options);
-  }
-
+}
   ngOnInit(): void {
     AOS.init({disable: 'mobile'});//AOS - 2
     AOS.refresh();

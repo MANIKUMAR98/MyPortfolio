@@ -2,7 +2,7 @@
   .work-exp-desc {
     background-color: #241d41;
     color: white;
-    width: 56% !important; 
+    width: 800px; //56% !important; 
     border-radius: 8px;
     padding: 10px 3px 0px 3px;
     height: 215px;
@@ -62,9 +62,38 @@
 
   .card-header {
     min-height: 54px; 
-    width: 56%;
+    width: 800px;
     border-radius: 8px;
     align-items: center;
     display: grid;
     padding: 0 16px 0 16px;
   }
+
+  @media screen and (max-width: 730px) {
+    .work-exp-desc {
+      height: 260px;
+    }
+  }
+
+
+  // @media screen and (max-width: 900px) {
+  //   .work-exp-desc {
+  //     width: 95% !important;
+  //   }
+
+  //   .card-header {
+  //     width: 95%;
+  //   }
+  // }
+
+  // @media screen and (min-width: 901px) and (max-width: 1000px) {
+  //   .work-exp-desc {
+  //     width: 80% !important;
+  //   }
+  // }
+
+  // @media screen and (min-width: 1001px) and (max-width: 1150px) {
+  //   .work-exp-desc {
+  //     width: 75% !important;
+  //   }
+  // }
