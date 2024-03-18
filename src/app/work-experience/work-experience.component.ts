@@ -27,13 +27,12 @@ export class WorkExperienceComponent {
   constructor(private service: AppServiceService){
     this.service.getWorkExpData().subscribe((res : any) => {
       this.workExpData = res.data;
-      console.log(this.workExpData[0].showCard)
     })
   }
 
 
   ngOnInit(): void {
-    AOS.init();
+    AOS.init({disable: 'mobile'});
     AOS.refresh();
   }
 

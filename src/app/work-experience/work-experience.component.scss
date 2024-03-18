@@ -69,9 +69,18 @@
     padding: 0 16px 0 16px;
   }
 
+  .work-exp-container {
+    margin-left: 4%; 
+    margin-right: 4%;
+  }
+
   @media screen and (max-width: 730px) {
     .work-exp-desc {
       height: 260px;
+    }
+
+    .work-exp-container { 
+      margin-bottom: 12%;
     }
   }
 
