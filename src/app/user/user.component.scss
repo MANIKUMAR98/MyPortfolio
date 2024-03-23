@@ -134,3 +134,21 @@
     width: 100%;
   }
 }
+
+.large-desc {
+  display: block;
+}
+.small-desc {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .small-desc {
+    display: block;
+  }
+
+  .large-desc {
+    display: none;
+  }
+  
+}

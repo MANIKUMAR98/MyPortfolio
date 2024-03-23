@@ -24,21 +24,12 @@ export class UserComponent {
     let options = {};
     const screenWidth = window.innerWidth;
 
-    if (screenWidth < 900) {
-        options = {
-            strings: ['Manikumar H L'],
-            typeSpeed: 80, 
-            backSpeed: 30, 
-            showCursor: true
-        };
-    } else {
-        options = {
-            strings: ['Manikumar Honnenahalli Lakshminarayana Swamy'],
-            typeSpeed: 80, 
-            backSpeed: 30, 
-            showCursor: true
-        };
-    }
+    options = {
+      strings: ['Manikumar H L'],
+      typeSpeed: 80, 
+      backSpeed: 30, 
+      showCursor: true
+  };
 
     new Typed(this.typingElement.nativeElement, options);
 }
