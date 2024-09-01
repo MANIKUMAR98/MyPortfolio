@@ -1,6 +1,18 @@
 {
     "data" : [
         {
+            "companyName": "United Parcel Service",
+            "position": "Software Engineer Intern",
+            "duration": "2024-Present",
+            "location": "Parsippany, New Jersey",
+            "description": "Designed and integrated a new algorithm into the microservices architecture to group packages with similar addresses, reducing delivery trips by the driver.",
+            "skills": [
+                "Java", "Angular", "Springboot", "Openshift", "Kafka", "Grafana"
+            ],
+            "logo": "assets/images/UPS-logo.png",
+            "showCard": true
+        },
+        {
             "companyName": "Boeing",
             "position": "Java Full Stack Developer",
             "duration": "2022-2023",
@@ -10,7 +22,7 @@
                 "Java", "Angular", "Springboot", "Kubernetes", "Azure", "MS SQL"
             ],
             "logo": "assets/images/Boeing.png",
-            "showCard": true
+            "showCard": false
         }, 
         {
             "companyName": "Cognizant",
@@ -19,7 +31,7 @@
             "location": "Pune, India",
             "description": "Optimized Order Management System with Java, Angular, Spring Boot, Azure, SQL, Kubernetes, and ActiveMQ, achieving 20% responsiveness boost. Automated data migration reduced workload by 60%.",
             "skills": [
-                "Java", "Python", "Kafka", "Docker", "Angular", "Splunk"
+                "Java", "Python", "ActiveMQ", "Docker", "Angular", "Splunk"
             ],
             "logo": "assets/images/Cognizant.svg",
             "showCard": false
