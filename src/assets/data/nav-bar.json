@@ -18,6 +18,11 @@
       },
       {
         "id": 4,
+        "name": "PROJECTS",
+        "target": "projects"
+      },
+      {
+        "id": 5,
         "name": "CONTACT ME",
         "target": "contact"
       }

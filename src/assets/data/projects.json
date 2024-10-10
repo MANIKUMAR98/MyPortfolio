@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "projectTitle": "Semantic Role Labeling",
+            "projectDescription": "Developed a Semantic Role Labeling system using BERT to predict actor-action pairs from news articles, integrating advanced NLP techniques like spaCy for NER, Dependency Parsing, and Coreference Resolution.",
+            "projectLink": "https://github.com/MANIKUMAR98/News_Article_Analysis-Using-SRL",
+            "tags": ["Python", "BERT", "Spacy"]
+        },
+        {
+            "projectTitle": "Peer-to-Peer File Sharing System",
+            "projectDescription": "Created a P2P file sharing software like BitTorrent in JAVA, implementing the choking-unchoking mechanism for efficient file distribution. The project used TCP for peer-to-peer communication and handled file piece exchange using custom protocols.",
+            "projectLink": "https://github.com/MANIKUMAR98/PeerToPeer-File-Transfer-Torrents",
+            "tags": ["Java", "Makefile", "Multi-threading"]
+        },
+        {
+            "projectTitle": "GatorLibrary System with Minheap and Red-Black Tree",
+            "projectDescription": "Developed GatorLibrary, a system leveraging Minheap and Red-Black Tree for efficient data retrieval, using React for the frontend, Spring Boot, and MySQL for database management.",
+            "projectLink": "https://github.com/MANIKUMAR98/GatorLibrary-Using-MinHeap-RedBlackTree",
+            "tags": ["Java", "Makefile"]
+        }
+    ]
+}

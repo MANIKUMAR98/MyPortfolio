@@ -1,0 +1,113 @@
+.projects-section {
+    display: flex;
+    justify-content: center; /* Center the section */
+    position: relative; /* Position for the divider */
+    padding: 20px;
+    padding-bottom: 8%;
+}
+
+.divider {
+    position: absolute;
+    left: 50%;
+    top: 0; /* Stretches to the top */
+    bottom: 0; /* Stretches to the bottom */
+    width: 2px; /* Line thickness */
+    background-color: black; /* Line color */
+    margin-bottom: 1%;
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center the items */
+    width: 100%; /* Full width to enable proper alignment */
+    position: relative; /* Relative positioning for absolute children */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Move the card slightly upward */
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2); /* Elevate the shadow */
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 0; /* Space between cards */
+    width: 36%; /* Width of the cards */
+    position: relative; /* Positioning for the horizontal line */
+    // z-index: 0; /* Ensure cards are above the lines */
+
+    &.left-card {
+        margin-right: auto; /* Align to the left */
+        margin-left: 8%;
+    }
+
+    &.right-card {
+        margin-left: auto; /* Align to the right */
+        margin-right: 8%;
+    }
+
+    /* Horizontal line connection */
+    &::before {
+        content: '';
+        position: absolute;
+        left: 100%; /* Start line from the left side of the card */
+        top: 50%; /* Center vertically */
+        width: 16.6%; /* Line length - adjust as needed */
+        height: 2px; /* Line thickness */
+        background-color: black; /* Line color */
+        // z-index: -1; /* Place behind the card */
+        transform: translateY(-50%); /* Center the line */
+    }
+
+    &.right-card::before {
+        left: auto; /* For right cards, start from the right */
+        right: 100%; /* Start line from the right side of the card */
+    }
+
+    .project-info {
+        h4 {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px;
+            color: #3f4348;
+            text-align: justify;
+
+            a {
+                color: #007bff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .project-tags {
+        margin-top: 10px;
+
+        .tag {
+            display: inline-block;
+            background-color: #f29b9b;
+            color: #FFFFFF;
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .project-icons {
+        margin-top: 15px;
+        float: right;
+
+        a {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #343a40;
+        }
+    }
+}

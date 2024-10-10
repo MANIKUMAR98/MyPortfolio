@@ -1,0 +1,32 @@
+<div style="background-color: #f2f2f2;">
+    <div class="pt-16 flex uppercase justify-center text-3xl font-bold bg-gradient-to-r from-teal-500 via-indigo-600 to-orange-500 text-transparent bg-clip-text bg-300% animate-gradient">
+      Projects
+    </div>
+    <div class="flex justify-center mt-1 mb-8">
+      <img src="https://demo.templateflip.com/super/images/marker.svg" />
+    </div>
+    <div class="projects-section">
+        <div class="divider"></div> <!-- Divider line -->
+        <div class="project-cards">
+            <div class="project-card" *ngFor="let project of projects; let i = index" [ngClass]="{'left-card': i % 2 === 0, 'right-card': i % 2 !== 0}">
+                <div class="project-info">
+                    <h4>{{ project.projectTitle }}</h4>
+                    <p>
+                        {{ project.projectDescription }}
+                        <a [href]="project.projectLink" target="_blank">{{ project.linkLabel }}</a>
+                    </p>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="project-tags">
+                        <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                    </div>
+                    <div class="project-icons">
+                        <a [href]="project.projectLink" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

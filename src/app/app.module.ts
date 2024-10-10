@@ -16,6 +16,7 @@ import { AppServiceService } from './services/app-service.service';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     WorkExperienceComponent,
     MaterialElevationDirective,
     ContactFormComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
