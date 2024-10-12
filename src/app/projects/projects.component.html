@@ -7,7 +7,7 @@
     </div>
     <div class="projects-section">
         <div class="divider"></div> <!-- Divider line -->
-        <div class="project-cards">
+        <div data-aos="zoom-in" data-aos-duration="1300" data-aos-once="true" class="project-cards">
             <div class="project-card" *ngFor="let project of projects; let i = index" [ngClass]="{'left-card': i % 2 === 0, 'right-card': i % 2 !== 0}">
                 <div class="project-info">
                     <h4>{{ project.projectTitle }}</h4>
