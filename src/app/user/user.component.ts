@@ -25,7 +25,7 @@ export class UserComponent {
     const screenWidth = window.innerWidth;
 
     options = {
-      strings: ['Manikumar H L'],
+      strings: ['Manikumar Honnenahalli Lakshminarayana Swamy'],
       typeSpeed: 80, 
       backSpeed: 30, 
       showCursor: true
